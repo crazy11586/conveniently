@@ -1,0 +1,219 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <View
+        android:id="@+id/left_top_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/left_drawer_top_view_height"
+        android:background="@drawable/logo"/>
+
+    <ImageView
+        android:id="@+id/iv_userHead"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/ic_qu_appbar_back"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_toRightOf="@id/iv_userHead"
+        android:layout_marginTop="70dp"
+        android:textSize="17dp"
+        android:layout_marginLeft="15dp"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginRight="60dp"
+        android:text="Crazy邂逅"/>
+
+    <LinearLayout
+        android:layout_below="@id/userName"
+        android:layout_toRightOf="@id/iv_userHead"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="60dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_phone"/>
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/userPhone"
+            android:textSize="13dp"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="18874489925"/>
+    </LinearLayout>
+
+<ScrollView
+    android:layout_below="@+id/left_top_banner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/left_drawer_satellite"
+            style="@style/drawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="80dp"
+            android:drawableLeft="@drawable/left_drawer_satellite"
+            android:text="@string/left_drawer_satellite"
+            tools:ignore="RtlHardcoded"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ccc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/left_drawer_publish"
+            style="@style/drawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="80dp"
+            android:drawableLeft="@drawable/left_drawer_publish"
+            android:text="@string/left_drawer_publish"
+            tools:ignore="RtlHardcoded"/>
+
+        <Button
+            android:id="@+id/left_drawer_get"
+            style="@style/drawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="80dp"
+            android:drawableLeft="@drawable/left_drawer_get"
+            android:text="@string/left_drawer_get"
+            tools:ignore="RtlHardcoded"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ccc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/root_message"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <Button
+                android:id="@+id/left_drawer_message"
+                style="@style/drawerMenuButton"
+                android:layout_width="match_parent"
+                android:layout_weight="0"
+                android:layout_marginRight="80dp"
+                android:drawableLeft="@drawable/left_drawer_message"
+                android:text="@string/left_drawer_message"
+                tools:ignore="RtlHardcoded"/>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/message_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_mylocation"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/root_friend"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <Button
+                android:layout_marginRight="80dp"
+                android:id="@+id/left_drawer_friend"
+                style="@style/drawerMenuButton"
+                android:layout_width="match_parent"
+                android:layout_weight="0"
+                android:drawableLeft="@drawable/left_drawer_friend"
+                android:text="@string/left_drawer_friend"
+                tools:ignore="RtlHardcoded"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/friend_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_mylocation"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/root_circle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <Button
+                android:layout_marginRight="80dp"
+                android:id="@+id/left_drawer_circle"
+                style="@style/drawerMenuButton"
+                android:layout_width="match_parent"
+                android:layout_weight="0"
+                android:drawableLeft="@drawable/left_drawer_circle"
+                android:text="@string/left_drawer_circle"
+                tools:ignore="RtlHardcoded"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/circle_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_mylocation"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ccc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:id="@+id/left_drawer_person"
+            style="@style/drawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="80dp"
+            android:drawableLeft="@drawable/left_drawer_person"
+            android:text="@string/left_drawer_person"
+            tools:ignore="RtlHardcoded"/>
+
+        <Button
+            android:id="@+id/left_drawer_setting"
+            style="@style/drawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="80dp"
+            android:drawableLeft="@drawable/left_drawer_setting"
+            android:text="@string/left_drawer_setting"
+            tools:ignore="RtlHardcoded"/>
+
+    </LinearLayout>
+</ScrollView>
+    <org.zarroboogs.maps.widget.StatusBarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4C000000"/>
+</RelativeLayout>
